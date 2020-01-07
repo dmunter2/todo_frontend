@@ -81,10 +81,10 @@ const SignUp = (props) => {
     const handleSubmit = e => {
         e.preventDefault();
         axiosWithAuth()
-            .post('http://localhost:5000/api/auth/register', credentials)
+            .post('https://todoappp1.herokuapp.com/api/auth/register', credentials)
             .then(res => {
                 console.log(res)
-                axiosWithAuth().post('http://localhost:5000/api/auth/login', credentials)
+                axiosWithAuth().post('https://todoappp1.herokuapp.com/api/auth/login', credentials)
                     .then(res =>
                         localStorage.setItem('token', res.data.token),
                         props.history.push('/home')
