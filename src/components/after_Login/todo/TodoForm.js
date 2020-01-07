@@ -87,7 +87,7 @@ const TodoForm = props => {
         props.addnewtodo(newtodo);
 
         axiosWithAuth()
-            .post('http://localhost:5000/api/todo/create', todo)
+            .post('https://todoappp1.herokuapp.com/api/todo/create', todo)
             .then(res => {
                 console.log(res, {message: "success"})
             })
