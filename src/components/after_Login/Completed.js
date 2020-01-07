@@ -41,7 +41,7 @@ export default function Completed() {
 
     useEffect(() => {
         axiosWithAuth()
-            .get('http://localhost:5000/api/completed/task')
+            .get('https://todoappp1.herokuapp.com/api/completed/task')
             .then(res => setTodo(res.data))
             // .then(res => console.log(res.data))
             .catch(err => console.log(err))

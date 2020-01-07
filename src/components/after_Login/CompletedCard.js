@@ -71,14 +71,14 @@ const CompletedCard = ({ title, description, setTodo }) => {
         e.preventDefault();
         console.log(title)
         axiosWithAuth()
-            .delete('http://localhost:5000/api/completed/title', {
+            .delete('https://todoappp1.herokuapp.com/api/completed/title', {
                 data: {
                     title
                 }
             })
             .then(() => {
                 axiosWithAuth()
-                    .get('http://localhost:5000/api/completed/task')
+                    .get('https://todoappp1.herokuapp.com/api/completed/task')
                     .then(res => setTodo(res.data))
             })
         

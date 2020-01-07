@@ -39,7 +39,7 @@ export default function HomePage() {
 
     useEffect(() => {
         axiosWithAuth()
-            .get('http://localhost:5000/api/todo/task')
+            .get('https://todoappp1.herokuapp.com/api/todo/task')
             .then(res => setTodos(res.data))
             // .then(res => console.log(res.data))
             .catch(err => console.log(err))
