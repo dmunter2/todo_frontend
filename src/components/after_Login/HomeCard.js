@@ -73,7 +73,7 @@ const HomeCard = ({title, description, setTodos}) => {
         e.preventDefault();
         console.log(title)
         axiosWithAuth()
-            .delete('http://localhost:5000/api/todo/title', {
+            .delete('https://todoappp1.herokuapp.com/api/todo/title', {
                 data: {
                     title
                 }
@@ -87,13 +87,13 @@ const HomeCard = ({title, description, setTodos}) => {
     const AddToCompleted = e => {
         e.preventDefault();
         axiosWithAuth()
-            .post('http://localhost:5000/api/completed/check',{
+            .post('https://todoappp1.herokuapp.com/api/completed/check',{
                 title: title,
                 description: description
             })
             .then(() => {
                 axiosWithAuth()
-                    .delete('http://localhost:5000/api/todo/title', {
+                    .delete('https://todoappp1.herokuapp.com/api/todo/title', {
                         data: {
                             title
                         }

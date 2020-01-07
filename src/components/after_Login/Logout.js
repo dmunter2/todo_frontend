@@ -26,7 +26,7 @@ const Logout = () => {
     function ClickHandler(e){
         e.preventDefault();
         localStorage.clear()
-        window.location.href ='http://localhost:3000/'
+        window.location.href ='https://todoappp1.herokuapp.com/'
         
     }
 

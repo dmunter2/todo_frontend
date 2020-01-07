@@ -12,6 +12,16 @@ width: 400px;
 margin: 0 2% 0 2%;
 justify-content: space-between;
 
+
+@media (max-width: 500px) {
+  margin: 0;
+  width: 350px;
+  margin-bottom: 70px;
+}
+
+
+
+
 `
 
 
