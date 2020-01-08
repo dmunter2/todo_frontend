@@ -77,7 +77,7 @@ const Login = () => {
                 console.log(res.data)
                 localStorage.setItem('token', res.data.token)
                 localStorage.setItem('id', res.data.user_id)
-                window.location.href = `https://elastic-gates-3ba026.netlify.com/login/home/homepage`
+                window.location.href = `https://elastic-gates-3ba026.netlify.com/home/homepage`
                 // console.log(localStorage.getItem)
              
             })
