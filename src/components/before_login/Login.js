@@ -77,7 +77,7 @@ const Login = () => {
                 console.log(res.data)
                 localStorage.setItem('token', res.data.token)
                 localStorage.setItem('id', res.data.user_id)
-                window.location.href = `/home`
+                window.location.href = `/home/homepage`
                 // console.log(localStorage.getItem)
              
             })
