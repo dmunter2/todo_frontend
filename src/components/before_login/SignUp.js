@@ -87,7 +87,7 @@ const SignUp = (props) => {
                 axiosWithAuth().post('https://todoappp1.herokuapp.com/api/auth/login', credentials)
                     .then(res =>
                         localStorage.setItem('token', res.data.token),
-                        props.history.push('/home/homepage')
+                        props.history.push('/home')
                         )
             })
 

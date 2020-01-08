@@ -43,12 +43,12 @@ const UserHome = () => {
     return(
         <DIV>
             <DIV1>
-                <Route exact path='/(home/homepage|home/addtodo|home/completed)' component={AfterLogin} />
+                <Route exact path='/(home|home/homepage|home/addtodo|home/completed)' component={AfterLogin} />
                 <Navigation />
             </DIV1>
 
             <Route exact path='/home/completed' component={Completed} />
-            <Route exact path='/home/homepage' component={HomePage} />
+            <Route exact path='/(home/homepage|home)' component={HomePage} />
             <Route path='/home/addtodo' render={props => (<AddTodo {...props} todolist={todos} addnewtodo={addnewtodo} />)} />
 
         </DIV>
