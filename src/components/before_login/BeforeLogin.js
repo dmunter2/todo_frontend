@@ -49,10 +49,7 @@ justify-content: space-around;
     // width: 200px;
     width: 100%;
 }
-
-
 `
-
 
 const H1 = Style.h1`
 font-family: 'Long Cang', cursive;
