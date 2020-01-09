@@ -3,6 +3,11 @@ import React, {useState} from 'react';
 import axiosWithAuth from '../utils/axiosWithAuth';
 import {Link} from 'react-router-dom'
 import Style from 'styled-components';
+import { Route, Redirect } from 'react-router-dom';
+
+
+
+
 
 const DIV = Style.div`
 width: 400px;
@@ -57,13 +62,12 @@ display: flex;
 align-items: center;
 `
 
-const Login = () => {
+const Login = (props) => {
 
     const [credentials, setCredentials] = useState({
         username: "",
         password: ""
     })
-
 
 
 
@@ -74,15 +78,16 @@ const Login = () => {
             axiosWithAuth()
                 .post('https://todoappp1.herokuapp.com/api/auth/login', credentials)
             .then(res => {
+
                 console.log(res.data)
+                // let newVar = res.data.token;
+                // console.log(newVar)
                 localStorage.setItem('token', res.data.token)
                 localStorage.setItem('id', res.data.user_id)
-                window.location.href = `/home`
-                // console.log(localStorage.getItem)
-             
-            })
-    }
+                window.location.href= '/home'
 
+
+            })}
 
     const handleChanges = e => {
         return setCredentials({
@@ -117,13 +122,21 @@ const Login = () => {
 
 
                 <BUTTON className='login_btn' type='submit'>Log in</BUTTON>
+
+                {/* {localStorage.token ? null : <Redirect to='/home' />} */}
+
+
+          
                 
             
         </FORM>
             <LINKDIV>
                 <H2>No account?</H2>
+
+
                 <DIV4>
                     <Link className='link_signup' to='/signup'>Sign up</Link>
+                    
                 </DIV4>
             </LINKDIV>
 
