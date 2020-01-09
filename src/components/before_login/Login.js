@@ -86,7 +86,6 @@ const Login = (props) => {
                 localStorage.setItem('id', res.data.user_id)
                 window.location.href= '/home'
 
-
             })}
 
     const handleChanges = e => {
