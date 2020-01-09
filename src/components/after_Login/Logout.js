@@ -25,7 +25,7 @@ const Logout = () => {
 
     function ClickHandler(e){
         e.preventDefault();
-        localStorage.clear()
+        localStorage.clear();
         window.location.href ='/'
         
     }
