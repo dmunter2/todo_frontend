@@ -25,8 +25,8 @@ const Logout = () => {
 
     function ClickHandler(e){
         e.preventDefault();
-        localStorage.clear()
-        // window.location.href ='https://todoappp1.herokuapp.com/'
+        localStorage.clear();
+        window.location.href ='/'
         
     }
 
